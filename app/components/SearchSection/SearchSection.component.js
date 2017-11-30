@@ -3,16 +3,19 @@ import PropTypes from 'prop-types';
 
 const SearchSection = (props) => (
   <div className={props.className} >
-    <input />
+    <input onChange={(event) => props.searchQueryChange(event.target.value)} />
     <button onClick={() => props.requestSearch()}>Search!</button>
-    {props.isLoading ? 'Loading...' : 'false'}
+    <br />
+    {props.isLoading ? ['Searching ', props.searchQuery] : 'false'}
   </div>
 );
 
 SearchSection.propTypes = {
   className: PropTypes.string,
   isLoading: PropTypes.bool,
+  searchQuery: PropTypes.string,
   requestSearch: PropTypes.func,
+  searchQueryChange: PropTypes.func,
 };
 
 export default SearchSection;
