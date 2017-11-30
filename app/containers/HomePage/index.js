@@ -10,13 +10,17 @@
  */
 
 import React from 'react';
+import SearchSection from 'components/SearchSection';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <h1>
-        Cool
-      </h1>
+      <div>
+        <h1>
+          Qioutube
+        </h1>
+        <SearchSection />
+      </div>
     );
   }
 }
