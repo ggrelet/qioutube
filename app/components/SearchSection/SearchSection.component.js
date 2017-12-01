@@ -6,7 +6,7 @@ const SearchSection = (props) => (
     <input onChange={(event) => props.searchQueryChange(event.target.value)} />
     <button onClick={() => props.requestSearch()}>Search!</button>
     <br />
-    {props.isLoading ? ['Searching ', props.searchQuery] : 'false'}
+    {props.isLoading && `Searching "${props.searchQuery}"...`}
   </div>
 );
 

@@ -9,6 +9,8 @@ const searchReducer = (searchState = initialSearchState, action) => {
       return { ...searchState, isLoading: true };
     case 'SEARCH_QUERY_CHANGE':
       return { ...searchState, query: action.query };
+    case 'REQUEST_SEARCH_SUCCESS':
+      return { ...searchState, items: action.items, isLoading: false };
     default:
       return searchState;
   }

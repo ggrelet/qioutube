@@ -1,15 +1,10 @@
 import { connect } from 'react-redux';
 import Player from './Player.style';
-import { displayVideo } from './actions';
 
 const mapStateToProps = (state) => ({
-  id: state.video.id,
+  id: state.search.items && state.search.items[0] && state.search.items[0].id.videoId,
 });
 
-const mapDispatchToProps = {
-  displayVideo,
-};
-
-const PlayerContainer = connect(mapStateToProps, mapDispatchToProps)(Player);
+const PlayerContainer = connect(mapStateToProps)(Player);
 
 export default PlayerContainer;
