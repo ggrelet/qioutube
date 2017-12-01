@@ -2,12 +2,13 @@
  * Combine all reducers in this file and export the combined reducers.
  */
 
-import { combineReducers } from 'redux-immutable';
+import { combineReducers } from 'redux';
 import { fromJS } from 'immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
 import searchReducer from 'components/SearchSection/reducer';
+import videoReducer from 'components/Player/reducer';
 
 /*
  * routeReducer
@@ -45,6 +46,7 @@ export default function createReducer(injectedReducers) {
     route: routeReducer,
     language: languageProviderReducer,
     search: searchReducer,
+    video: videoReducer,
     ...injectedReducers,
   });
 }

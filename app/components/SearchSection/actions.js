@@ -1,6 +1,5 @@
-export const requestSearch = (query) => ({
+export const requestSearch = () => ({
   type: 'REQUEST_SEARCH',
-  query,
 });
 
 export const searchQueryChange = (query) => ({

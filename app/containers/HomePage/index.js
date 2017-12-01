@@ -11,6 +11,7 @@
 
 import React from 'react';
 import SearchSection from 'components/SearchSection';
+import Player from 'components/Player';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -20,6 +21,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
           Qioutube
         </h1>
         <SearchSection />
+        <Player />
       </div>
     );
   }

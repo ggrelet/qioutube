@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import searchSection from './SearchSection.style';
+import SearchSection from './SearchSection.style';
 import { requestSearch, searchQueryChange } from './actions';
 
 const mapStateToProps = (state) => ({
-  isLoading: state.get('search').isLoading,
-  searchQuery: state.get('search').query,
+  isLoading: state.search.isLoading,
+  searchQuery: state.search.query,
 });
 
 const mapDispatchToProps = {
@@ -12,6 +12,6 @@ const mapDispatchToProps = {
   searchQueryChange,
 };
 
-const searchSectionContainer = connect(mapStateToProps, mapDispatchToProps)(searchSection);
+const SearchSectionContainer = connect(mapStateToProps, mapDispatchToProps)(SearchSection);
 
-export default searchSectionContainer;
+export default SearchSectionContainer;
