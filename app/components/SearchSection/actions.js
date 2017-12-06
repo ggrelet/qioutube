@@ -2,9 +2,9 @@ export const requestSearch = () => ({
   type: 'REQUEST_SEARCH',
 });
 
-export const requestSearchSuccess = (items) => ({
+export const requestSearchSuccess = (videos) => ({
   type: 'REQUEST_SEARCH_SUCCESS',
-  items,
+  videos,
 });
 
 export const searchQueryChange = (query) => ({

@@ -5,6 +5,7 @@ import { requestSearch, searchQueryChange } from './actions';
 const mapStateToProps = (state) => ({
   isLoading: state.search.isLoading,
   searchQuery: state.search.query,
+  videos: state.search.videos,
 });
 
 const mapDispatchToProps = {

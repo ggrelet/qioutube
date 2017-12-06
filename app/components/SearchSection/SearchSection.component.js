@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import VideoItem from '../VideoItem/VideoItem.style';
 
 const SearchSection = (props) => (
-  <div className={props.className} >
+  <form className={props.className} >
     <input onChange={(event) => props.searchQueryChange(event.target.value)} />
-    <button onClick={() => props.requestSearch()}>Search!</button>
+    <button type="submit" onClick={(event) => { event.preventDefault(); props.requestSearch(); }}>
+      Search!
+    </button>
     <br />
     {props.isLoading && `Searching "${props.searchQuery}"...`}
-  </div>
+    {props.videos.map((video) => (<VideoItem video={video} />))}
+  </form>
 );
 
 SearchSection.propTypes = {
@@ -16,6 +20,7 @@ SearchSection.propTypes = {
   searchQuery: PropTypes.string,
   requestSearch: PropTypes.func,
   searchQueryChange: PropTypes.func,
+  videos: PropTypes.array,
 };
 
 export default SearchSection;

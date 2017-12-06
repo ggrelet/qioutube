@@ -8,6 +8,10 @@ export const requestYouTubeSearch = (query) => {
     params: {
       q: query,
       part: 'snippet',
+      type: 'video',
+      videoSyndicated: 'true',
+      videoEmbeddable: 'true',
+      maxResults: 10,
       key: YT_API_KEY,
     },
   });

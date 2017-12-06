@@ -1,6 +1,7 @@
 const initialSearchState = {
   isLoading: false,
   query: '',
+  videos: [],
 };
 
 const searchReducer = (searchState = initialSearchState, action) => {
@@ -10,7 +11,7 @@ const searchReducer = (searchState = initialSearchState, action) => {
     case 'SEARCH_QUERY_CHANGE':
       return { ...searchState, query: action.query };
     case 'REQUEST_SEARCH_SUCCESS':
-      return { ...searchState, items: action.items, isLoading: false };
+      return { ...searchState, videos: action.videos, isLoading: false };
     default:
       return searchState;
   }
