@@ -10,15 +10,15 @@ import YouTube from 'react-youtube';
 const Player = (props) => (
   <div className={props.className} >
     <h1>
-      {props.id}
+      {props.videoId}
     </h1>
-    <YouTube videoId={props.id} />
+    <YouTube videoId={props.videoId} />
   </div>
 );
 
 Player.propTypes = {
   className: PropTypes.string,
-  id: PropTypes.string,
+  videoId: PropTypes.string,
 };
 
 export default Player;

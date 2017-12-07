@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import VideoItem from '../VideoItem/VideoItem.style';
+import VideoItem from 'components/VideoItem';
 
 const SearchSection = (props) => (
   <form className={props.className} >
@@ -10,7 +10,7 @@ const SearchSection = (props) => (
     </button>
     <br />
     {props.isLoading && `Searching "${props.searchQuery}"...`}
-    {props.videos.map((video) => (<VideoItem video={video} />))}
+    {props.videos.map((video) => (<VideoItem key={video.id.videoId} video={video} />))}
   </form>
 );
 

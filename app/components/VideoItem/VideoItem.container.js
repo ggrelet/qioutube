@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
+import { playVideo } from 'components/Player/actions';
 import VideoItem from './VideoItem.style';
 
-const mapStateToProps = (state) => ({
-  video: state.search.videos,
-});
+const mapDispatchToProps = {
+  playVideo,
+};
 
-const VideoItemContainer = connect(mapStateToProps)(VideoItem);
+const VideoItemContainer = connect(undefined, mapDispatchToProps)(VideoItem);
 
 export default VideoItemContainer;

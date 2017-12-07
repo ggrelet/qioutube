@@ -8,6 +8,7 @@ import { LOCATION_CHANGE } from 'react-router-redux';
 
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
 import searchReducer from 'components/SearchSection/reducer';
+import playingVideoReducer from 'components/Player/reducer';
 
 /*
  * routeReducer
@@ -45,6 +46,7 @@ export default function createReducer(injectedReducers) {
     route: routeReducer,
     language: languageProviderReducer,
     search: searchReducer,
+    playingVideo: playingVideoReducer,
     ...injectedReducers,
   });
 }

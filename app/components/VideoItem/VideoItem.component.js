@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 const VideoItem = (props) => (
-  <div className={props.className} >
+  <div onClick={() => props.playVideo(props.video.id.videoId)} className={props.className}>
     <img alt={props.video.snippet.title} src={props.video.snippet.thumbnails.default.url} />
     <span className="video-title">
       {props.video.snippet.title}
@@ -13,6 +14,7 @@ const VideoItem = (props) => (
 VideoItem.propTypes = {
   className: PropTypes.string,
   video: PropTypes.object,
+  playVideo: PropTypes.func,
 };
 
 export default VideoItem;
