@@ -9,10 +9,7 @@ import YouTube from 'react-youtube';
 
 const Player = (props) => (
   <div className={props.className} >
-    <h1>
-      {props.videoId}
-    </h1>
-    <YouTube videoId={props.videoId} />
+    {props.videoId && <YouTube videoId={props.videoId} />}
   </div>
 );
 

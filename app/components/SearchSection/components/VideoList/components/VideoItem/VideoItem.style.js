@@ -12,6 +12,14 @@ const StyledVideoItem = styled(VideoItem)`
   .video-title {
     color: blue;
   }
+
+  cursor: pointer;
+
+
+  &:hover {
+    background-color: #ffecaf;
+  }
+
 `;
 
 export default StyledVideoItem;

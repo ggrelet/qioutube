@@ -8,7 +8,7 @@ const StyledSearchSection = styled(SearchSection)`
   button {
     margin-left: 10px;
   }
-  `;
+`;
 //   input {
 //     border: 1px solid black;
 //   }

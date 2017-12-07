@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import VideoItem from 'components/VideoItem';
+
+import VideoList from './components/VideoList';
 
 const SearchSection = (props) => (
   <form className={props.className} >
-    <input onChange={(event) => props.searchQueryChange(event.target.value)} />
+    <input autoFocus onChange={(event) => props.searchQueryChange(event.target.value)} />
     <button type="submit" onClick={(event) => { event.preventDefault(); props.requestSearch(); }}>
       Search!
     </button>
     <br />
     {props.isLoading && `Searching "${props.searchQuery}"...`}
-    {props.videos.map((video) => (<VideoItem key={video.id.videoId} video={video} />))}
+    {props.videos.length > 0 && <VideoList videos={props.videos} />}
   </form>
 );
 
