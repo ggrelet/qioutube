@@ -1,8 +1,10 @@
 import { takeLatest, call, select, put } from 'redux-saga/effects';
+import { delay } from 'redux-saga';
 import { requestYouTubeSearch } from './api';
 import { requestSearchSuccess } from './actions';
 
 function* search() {
+  yield call(delay, 200);
   const query = yield select((state) => state.search.query);
   const response = yield call(requestYouTubeSearch, query);
   const videos = response.data.items;

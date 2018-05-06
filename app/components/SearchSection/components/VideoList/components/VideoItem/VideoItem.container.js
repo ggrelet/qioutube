@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { playVideo } from 'components/Player/actions';
+import { playVideo } from 'components/PlaySection/components/Player/actions';
 import VideoItem from './VideoItem.style';
 
 const mapDispatchToProps = {
